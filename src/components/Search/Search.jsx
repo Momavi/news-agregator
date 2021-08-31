@@ -14,6 +14,13 @@ function Search(props) {
           setFormData={props.setFormData}
         />
       </div>
+      {
+        props.newsPage.news[0] !== undefined
+          ?
+          <h3>Happy reading!</h3>
+          :
+          <h3>...The news are almost here, it remains button</h3>
+      }
     </div>
   )
 }

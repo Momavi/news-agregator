@@ -5,11 +5,16 @@ let initialtState = {
   sort: [
     { id: 1, text: 'Relevance' },
     { id: 2, text: 'Popularity' },
-    { id: 3, text: 'publishedAt' }
+    { id: 3, text: 'PublishedAt' }
+  ],
+  searchIn: [
+    { id: 1, text: 'Everything' },
+    { id: 2, text: 'Top-headlines' }
   ],
   formData: {
     text: '',
-    sort: 'relevance',
+    sort: 'Relevance',
+    searchIn: 'Everything',
   }
 };
 
