@@ -3,18 +3,25 @@ import Preloader from './../common/preloader/Preloader'
 import NewsItem from './NewsItem/NewsItem'
 import s from './News.module.scss'
 
-function Books({ news, onPageChanged, pageSize, totalBooksCount, currentPage, isFetching, isPopupOpen, togglePopupOpen }) {
+function News({ news, onPageChanged, pageSize, totalBooksCount, currentPage, isFetching, isPopupOpen, togglePopupOpen }) {
   return (
     <div>
-      <h2>Total books we found: {totalBooksCount}</h2>
-      <div className={s.books__paginator}>
-        <Paginator
-          currentPage={currentPage}
-          onPageChanged={onPageChanged}
-          totalBooksCount={totalBooksCount}
-          pageSize={pageSize} />
-      </div>
-      <div className={s.books__wrapper}>
+      {totalBooksCount > 0
+        ?
+        <div>
+          <h2 className={s.news__total}>Total news we found: {totalBooksCount}</h2>
+          <div className={s.news__paginator}>
+            <Paginator
+              currentPage={currentPage}
+              onPageChanged={onPageChanged}
+              totalBooksCount={totalBooksCount}
+              pageSize={pageSize} />
+          </div>
+        </div>
+        :
+        null
+      }
+      <div className={s.news__wrapper}>
         {isFetching
           ?
           <Preloader />
@@ -30,11 +37,11 @@ function Books({ news, onPageChanged, pageSize, totalBooksCount, currentPage, is
               />
             )
             :
-            <span className={s.error}>Новости пропали(попробуйте снова)</span>
+            <span className={s.error}>News is gone (try again)</span>
         }
       </div>
     </div>
   )
 }
 
-export default Books;
+export default News;
