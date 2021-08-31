@@ -13,13 +13,13 @@
     display: none;
   }
   &__body {
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
     background: #fff;
     margin-top: 5%;
     padding: 20px;
     border-radius: 10px;
-    max-height: 70%;
+    max-height: 80%;
     overflow-y: scroll;
   }
   &__close {
@@ -28,6 +28,13 @@
     font-size: 40px;
     cursor: pointer;
     color: gray;
+    transition: color 0.3s;
+    &:hover{
+      color: #000;
+    }
+  }
+  &__image{
+    max-width: 500px;
   }
   &__description{
     text-align: left;

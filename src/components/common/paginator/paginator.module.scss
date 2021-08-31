@@ -1,19 +1,18 @@
 .counter {
-  height: 40px;
+  height: 30px;
   max-width: 600px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: rgba(238, 254, 255, 0.911);
+  background-color: rgb(239, 254, 255);
   border: 1px solid #000;
   border-radius: 45px;
   font-size: 18px;
   &__item {
     margin-right: 15px;
     &:nth-child(11n) {
-      margin-right: 0;
+      margin-right: 0;  
     }
   }
   & > .active {
