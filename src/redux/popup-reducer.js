@@ -2,7 +2,7 @@ const SET_POPUP_DATA = 'SET_POPUP_DATA'
 const TOOGLE_POPUP_OPEN = 'TOOGLE_POPUP_OPEN'
 
 let initialtState = {
-  popupData: {},
+  popupData: { },
   isPopupOpen: false,
 };
 
@@ -19,7 +19,6 @@ function popupReducer(state = initialtState, action) {
 
 export const setPopupData = (popupData) => ({ type: SET_POPUP_DATA, popupData })
 export const setIsPopupOpen = (isPopupOpen) => ({ type: TOOGLE_POPUP_OPEN, isPopupOpen })
-
 
 export const togglePopupOpen = (book, isPopupOpen) => {
   return async (dispatch) => {

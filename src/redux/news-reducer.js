@@ -7,7 +7,7 @@ const SET_TOTAL_NEWS_COUNT = 'SET_TOTAL_NEWS_COUNT'
 
 let initialtState = {
   news: [],
-  pageSize: 30,
+  pageSize: 20,
   totalNews: 0,
   currentPage: 1,
   isFetching: false,

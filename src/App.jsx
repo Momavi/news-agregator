@@ -12,7 +12,6 @@ function App(props) {
       <SearchContainer />
       <Suspense fallback={<Preloader />}>
         <div className="content">
-          <h2>...The news are almost here, it remains to press the button</h2>
           <NewsContainer />
         </div>
       </Suspense>
