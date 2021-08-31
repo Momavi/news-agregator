@@ -1,45 +1,50 @@
 import './popup.scss'
-import BookMapArray from './../../Books/Book/BookMapArray'
 
 let Popup = (props) => {
   let popupPage = props.popupPage
-  let volume = props.popupPage.popupData.volumeInfo
+  let news = props.popupPage.popupData
   return (
     <div>
       {
-        volume !== undefined
+        news !== undefined
           ?
-          <div className={`popup ${popupPage.isPopupOpen ? 'open' : 'close'}`} onClick={() => { props.togglePopupOpen(!popupPage.isPopupOpen) }}>
+          <div className={`popup ${popupPage.isPopupOpen ? 'open' : 'close'}`}>
             <div className="popup__body">
               <div className="popup__close" onClick={() => { props.togglePopupOpen(!popupPage.isPopupOpen) }}>×</div>
-              <h3>{volume.title}</h3>
-              <img src={
-                volume.imageLinks !== undefined
+              <h3>{news.title}</h3>
+              <img className="popup__image" src={
+                news.urlToImage
                   ?
-                  volume.imageLinks.thumbnail
+                  news.urlToImage
                   :
                   null
               } alt="" />
+
+              <p className="popup__content">{news.content}</p>
+
+              <div className='news__source'>
+                <span className='news__source__publishedData'>{news.publishedAt}</span>
+              </div>
               <div className="popup__authors">
-                <span>Авторы: </span>
-                <BookMapArray volume={volume.authors} />
+                {
+                  news.source
+                    ?
+                    <span>Авторы: {news.source.name}</span>
+                    :
+                    null
+                }
               </div>
-              <div className="popup__categories">
-                <span>Категория: </span>
-                <BookMapArray volume={volume.categories} />
+              <div>
+                <span>Ссылка на источник: </span>
+                <a href={news.url} className='news__link'>{news.url}</a>
               </div>
-              <p className="popup__description">{volume.description}</p>
             </div>
           </div>
           :
           null
-
       }
-
     </div>
-
   )
-
 }
 
 export default Popup;
