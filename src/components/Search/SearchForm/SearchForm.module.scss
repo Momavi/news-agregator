@@ -1,0 +1,41 @@
+.form {
+  &__input {
+    margin-bottom: 20px;
+  }
+  &__sort {
+    margin-bottom: 30px;
+    &__text {
+      margin-right: 10px;
+    }
+    &__field {
+      width: 100px;
+      cursor: pointer;
+    }
+  }
+  &__searchIn {
+    margin-bottom: 30px;
+    &__text {
+      margin-right: 10px;
+    }
+    &__field {
+      width: 100px;
+      cursor: pointer;
+    }
+  }
+  &__button {
+    font-size: 16px;
+    transform: rotate(4deg);
+    background-color: rgb(49, 93, 212);
+    color: rgb(250, 250, 250);
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.05s;
+    z-index: 0;
+    &:hover {
+      transform: rotate(1deg);
+      background-color: rgb(17, 64, 190);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.news {
+  &__total {
+  }
+  &__paginator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+.error {
+}

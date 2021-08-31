@@ -1,0 +1,17 @@
+.search {
+  max-width: 450px;
+  margin: 0 auto;
+
+  &__wrapper {
+    border: 4px solid #000;
+    border-top: 0px solid transparent;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    padding: 40px 0;
+  }
+  &__title {
+    margin: 0;
+    padding: 40px 0;
+    text-decoration: underline;
+  }
+}
